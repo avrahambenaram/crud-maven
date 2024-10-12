@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funerária Santa Maria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #343a40;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .services, .booking, .deceased-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .booking form, .deceased-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .booking input, .booking select, .deceased-section input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        .booking input[type="submit"], .deceased-section input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        .booking input[type="submit"]:hover, .deceased-section input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Funerária Santa Maria</h1>
+        <nav>
+            <a href="#about">Sobre Nós</a>
+            <a href="#services">Serviços</a>
+            <a href="#booking">Agendar Velório</a>
+            <a href="#deceased">Falecidos</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Sobre Nós</h2>
+            <p>Na Funerária Santa Maria, oferecemos serviços respeitosos e dignos para honrar a memória de seus entes queridos. Com uma equipe dedicada e experiente, buscamos proporcionar suporte e conforto durante um momento difícil.</p>
+        </section>
+        <section id="services" class="section services">
+            <h2>Serviços</h2>
+            <ul>
+                <li>Planejamento e Coordenação de Cerimônias</li>
+                <li>Transporte Funerário</li>
+                <li>Preparação e Conservação</li>
+                <li>Assistência em Documentação</li>
+                <li>Venda de Caixões</li>
+            </ul>
+        </section>
+        <section id="booking" class="section booking">
+            <h2>Agendar Velório</h2>
+            <p>Para agendar um velório, por favor, preencha os detalhes abaixo.</p>
+            <form action="#" method="post">
+                <input type="text" name="deceased_name" placeholder="Nome do Falecido" required>
+                <input type="date" name="birth_date" placeholder="Data de Nascimento" required>
+                <input type="date" name="death_date" placeholder="Data da Morte" required>
+                <input type="number" name="height" placeholder="Altura (cm)" required>
+                <input type="text" name="insurance" placeholder="Convênio" required>
+                <input type="text" name="room" placeholder="Sala do Velório" required>
+                <input type="text" name="donation" placeholder="Doação" required>
+                <select name="disposition" required>
+                    <option value="" disabled selected>Escolha o Tipo de Disposição</option>
+                    <option value="cremation">Cremado</option>
+                    <option value="burial">Enterrado</option>
+                </select>
+                <input type="text" name="relative_name" placeholder="Nome do Familiar Responsável" required>
+                <input type="text" name="relative_cpf" placeholder="CPF do Familiar" required>
+                <input type="tel" name="relative_phone" placeholder="Telefone do Familiar" required>
+                <input type="email" name="relative_email" placeholder="Email do Familiar" required>
+                <input type="submit" value="Cadastrar">
+            </form>
+        </section>
+
+        <!-- Nova seção para visualização de falecidos -->
+        <section id="deceased" class="section deceased-section">
+            <h2>Falecidos Cadastrados</h2>
+            <form action="#" method="post">
+                <input type="text" name="deceased_id" placeholder="ID do Falecido" required>
+                <input type="submit" value="Visualizar Falecido por ID">
+            </form>
+            <a class="button" href="#">Visualizar Todos os Falecidos</a>
+        </section>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Funerária Santa Maria. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
